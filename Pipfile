@@ -3,13 +3,14 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
-[dev-packages]
-pandas = "*"
-sqlalchemy = "*"
-
 [packages]
 django = "*"
 "psycopg2-binary" = "*"
+"psycopg2" = "*"
+
+[dev-packages]
+pandas = "*"
+sqlalchemy = "*"
 
 [requires]
 python_version = "3.6"
