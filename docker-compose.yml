@@ -1,22 +1,21 @@
 version: '3'
 
-services: 
+services:
   db:
     image: postgres
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-  
+      - postgres_data:/var/lib/postgresql/data/
   web:
-    container_name: 'kickstarter_web'
-    build: ./web
     env_file: .env
+    build: ./web
+    container_name: 'kickstarter_web'
+    command: ./entrypoint.sh
     volumes:
-      - ./web/src
+      - ./web:/src
     ports:
       - "8000:8000"
     depends_on:
       - db
-    command: /src/entrypoint.sh
 
-volumes: 
+volumes:
   postgres_data:

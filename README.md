@@ -22,7 +22,6 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 apt-cache policy docker-ce
 # Installed: (none)
-sudo apt install docker-ce
 sudo apt install docker-compose
 sudo systemctl status docker
 ```
