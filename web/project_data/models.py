@@ -19,7 +19,7 @@ class Project(models.Model):
     usd_pledged = models.FloatField()
     usd_pledged_real = models.FloatField()
     usd_goal_real = models.FloatField()
-    
+
 
     def __str__(self):
         return '{}'.format(self.name)
