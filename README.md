@@ -75,6 +75,9 @@ sudo docker-compose up --build &
 sudo docker-compose down
 ```
 
+### Load Database
+- shell into web docker container and run load_db.py in container.
+
 ### saved
 - projects_list.html
 ```

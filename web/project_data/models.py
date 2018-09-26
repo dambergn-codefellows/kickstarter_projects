@@ -4,7 +4,7 @@ from django.db import models
 class Project(models.Model):
     """
     """
-    ID = models.IntegerField()
+    csv_id = models.IntegerField()
     name = models.CharField(max_length=1024)
     category = models.CharField(max_length=1024)
     main_category = models.CharField(max_length=1024)

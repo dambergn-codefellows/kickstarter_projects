@@ -7,7 +7,7 @@ csv_data = pd.read_csv('./assets/ks-projects-201801.csv')
 df = pd.DataFrame(csv_data)
 
 # Adjust NaN values in each column, and generally clean data set
-df['ID'] = df['ID'].fillna(-1)
+df['csv_id'] = df['id'].fillna(0)
 # del df['csv_id']
 df['name'] = df['name'].fillna('unknown')
 df['category'] = df['category'].fillna('unknown')
@@ -35,4 +35,4 @@ engine = create_engine('{}://{}:{}@{}:5432/{}'.format(
     db_protocol, db_user, db_password, db_host, db_name
 ))
 
-df.to_sql("kickstarter_app_projects", engine, if_exists='append', index=False)
+df.to_sql("project_data_project", engine, if_exists='append', index=False)
