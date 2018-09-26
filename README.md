@@ -55,6 +55,7 @@ sudo docker container ls
 sudo docker ps
 sudo docker exec -it image_name command
 sudo docker exec -it "CONTAINER ID" bash
+sudo docker exec -it "CONTAINER ID" psql -U postgres
 sudo docker stop my_container
 ```
 ### Django
