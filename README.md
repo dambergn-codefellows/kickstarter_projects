@@ -75,3 +75,12 @@ sudo docker-compose up --build &
 # To close backgound docker
 sudo docker-compose down
 ```
+
+### Load Database
+- shell into web docker container and run load_db.py in container.
+
+### saved
+- projects_list.html
+```
+
+```

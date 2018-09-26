@@ -4,19 +4,17 @@ from django.db import models
 class Project(models.Model):
     """
     """
-    country = models.CharField(max_length=1024)
-    description = models.CharField(max_length=1024)
-    designation = models.CharField(max_length=1024)
-    points = models.IntegerField()
-    price = models.FloatField()
-    province = models.CharField(max_length=1024)
-    region_1 = models.CharField(max_length=1024)
-    region_2 = models.CharField(max_length=1024)
-    taster_name = models.CharField(max_length=1024)
-    taster_twitter_handle = models.CharField(max_length=1024)
-    title = models.CharField(max_length=1024)
-    variety = models.CharField(max_length=1024)
-    winery = models.CharField(max_length=1024)
+    csv_id = models.IntegerField()
+    name = models.CharField(max_length=1024)
+    category = models.CharField(max_length=1024)
+    main_category = models.CharField(max_length=1024)
+    currency = models.CharField(max_length=1024)
+    deadline = models.CharField(max_length=1024)
+    goal = models.FloatField()
+    launched = models.CharField(max_length=1024)
+    pledged = models.FloatField()
+    state = models.CharField(max_length=1024)
+    backers = models.IntegerField()
 
     def __str__(self):
         return '{}'.format(self.title)
