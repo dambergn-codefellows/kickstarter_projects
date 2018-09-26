@@ -74,9 +74,3 @@ sudo docker-compose up --build &
 # To close backgound docker
 sudo docker-compose down
 ```
-
-### saved
-- projects_list.html
-```
-
-```

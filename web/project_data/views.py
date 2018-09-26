@@ -11,7 +11,7 @@ def projects_list_view(request):
     context = {
         'projects': projects
     }
-    return render(request, 'project/projects_list.html', context)
+    return render(request, 'projects/project_list.html', context)
 
 
 def project_detail_view(request, pk=None):
@@ -21,5 +21,5 @@ def project_detail_view(request, pk=None):
     context = {
         'project': project
     }
-    return render(request, 'project/project_detail.html', context)
+    return render(request, 'projects/project_detail.html', context)
 
