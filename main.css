@@ -1,0 +1,32 @@
+* {
+  position: static;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  white-space: normal;
+  background: none;
+  list-style: none;
+}
+
+form *:focus {
+  border: none;
+  outline: none;
+}
+
+h3 a {
+  color: #baddad;
+}
+h3 a:hover {
+  color: #faf171;
+}
+
+/*# sourceMappingURL=main.css.map */
