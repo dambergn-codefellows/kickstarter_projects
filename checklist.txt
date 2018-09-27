@@ -1,0 +1,58 @@
+# Checklist for stages of this project.
+
+Checklists to use for pull requests for stages of this project.
+
+## Code 31: SASS/SCSS
+
+- [x] Create a new repository called kickstarter_projects, and add your partner as a collaborator
+- [x] Working in your new repository, create a well named branch for today’s work
+- [x] Navigate to the Kaggle page for Kickstarter Projects Data set and download the 2018 csv data-set into an assets/ director within your repo
+- [x] Create a new Django application in the root of your repository, and configure your project scaffold
+- [x] update your settings to use environment variables rather than hard-coded values
+- [x] change your database connections
+- [x] Create a new app in the project called project_data
+- [x] configure a Project model to match the data that you’ll be loading into your database
+- [x] Using pandas and sqlalchemy (as developer dependencies) clean your data set and ensure that there are no NA fields, and that the columns of data are in a generally usable state for analysis
+- [ ] create your migrations and migrate your new model to a database table
+- [x] using the provided script as a base (you need to fine tune and further configure) load your data-set into the database
+- [x] configure your urls and views to provide routing and responses for either a list of projects or a single detail project page view
+- [ ] create your templates for each view; list or detail
+        Note: you do not need to add authentication to this application
+- [ ] You should have a basic application that shows database records for Kickstarter project data at this point; either in the form of a list of projects or a single project’s detail page
+Features
+- [ ] Following the general guidelines of SMACSS principles, create a series of *.scss stylesheets for your application, beginning with a
+- [ ] base.scss,
+- [ ] vars.scss,
+- [ ] and any other generalized stylesheets
+- [ ] Within your Django app, you should also have localized *.scss stylesheets which are specific to the project_data component
+- [ ] In order to process those stylesheets into *.css static files, you will be implementing thedjango-sass-processor package found HERE
+- [ ] Follow the installation instructions, and then further the setup instructions on GitHub to set up and provide a processor for your application’s stylesheets
+- [ ] Ensure that you’ve followed the instructions all the way through understanding how this package enables collection of static assets for production deployment; i.e. what you’ve been familiar with as collectstatic
+Testing
+- [x] No test requirements for this lab.
+General
+- [x] New branch name(s) for this work
+- [x] Update Checklist
+- [x] Update Readme
+
+## Code 32: Performance - Caching
+
+- [ ] install the LoadTest tool on your machine: npm i -g loadtest
+Early Testing (do this before building your features)
+- [ ] Run following testing against your application to benchmark (ugly results)
+   loadtest -n 10 -k http://127.0.0.1:8000
+Features
+- [ ] Implement the ability to paginate your responses for the list view of your kickstarter project queries
+- [ ] Your page should be able to easily navigate forward and backward between paginated query responses
+- [ ] Start off with somewhere around 20 records per page; you can adjust this as you see fit
+- [ ] Implement caching in your backend, and configure your cache to store queries on the first request
+- [ ] Any subsequent request, for the configured parameter (time, updates, etc), will then reap the benefits!
+- [ ] Using the developer tools (Network pane) as a visual guide, do some manual ‘trial by fire’ testing and tweaking of both your paginator values, and your caching values to see if your can see a noticeable difference in your response load times in the browser!
+Testing (running your benchmarks after building your features)
+- [ ] Run loadtest -n 100 -k http://127.0.0.1:8000 testing against your application to benchmark
+        It should pretty much be painful to watch
+- [ ] Try running with more requests ... -n 500 ...
+General
+- [ ] New branch name(s) for this work
+- [ ] Update Checklist
+- [ ] Update Readme
