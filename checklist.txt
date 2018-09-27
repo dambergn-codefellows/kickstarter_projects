@@ -15,7 +15,7 @@ Checklists to use for pull requests for stages of this project.
 - [x] Using pandas and sqlalchemy (as developer dependencies) clean your data set and ensure that there are no NA fields, and that the columns of data are in a generally usable state for analysis
 - [ ] create your migrations and migrate your new model to a database table
 - [x] using the provided script as a base (you need to fine tune and further configure) load your data-set into the database
-- [ ] configure your urls and views to provide routing and responses for either a list of projects or a single detail project page view
+- [x] configure your urls and views to provide routing and responses for either a list of projects or a single detail project page view
 - [ ] create your templates for each view; list or detail
         Note: you do not need to add authentication to this application
 - [ ] You should have a basic application that shows database records for Kickstarter project data at this point; either in the form of a list of projects or a single project’s detail page
@@ -30,17 +30,15 @@ Features
 - [ ] Ensure that you’ve followed the instructions all the way through understanding how this package enables collection of static assets for production deployment; i.e. what you’ve been familiar with as collectstatic
 Testing
 - [x] No test requirements for this lab.
-- [x] create checklist
-- [ ] Update Readme
 General
-- [ ] New branch name(s) for this work
-- [ ] Update Checklist
-- [ ] Update Readme
+- [x] New branch name(s) for this work
+- [x] Update Checklist
+- [x] Update Readme
 
 ## Code 32: Performance - Caching
 
 - [ ] install the LoadTest tool on your machine: npm i -g loadtest
-Testing (do this before building your features)
+Early Testing (do this before building your features)
 - [ ] Run following testing against your application to benchmark (ugly results)
    loadtest -n 10 -k http://127.0.0.1:8000
 Features
