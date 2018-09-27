@@ -1,6 +1,12 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-<h2>Welcome to the details for {{ review.title }} </h2>
-<h3>{{ review.description }}</h3>
+<h2>Welcome to the details for {{ project.name }} </h2>
+<ul>
+  <li>{{project.pledged }} out of {{project.goal }}</li>
+  <li>{{project.usd_pledged_real }} out of {{project.usd_goal_real }}</li>
+  <li>By {{project.backers }} backers</li>
+  <li>From {{project.launched}} to {{project.deadline}} </li>
+  <li>{{project.category}} | {{project.main_category}} | {{project.state}}, {{project.country}} </li>
+</ul>
 {% endblock %}

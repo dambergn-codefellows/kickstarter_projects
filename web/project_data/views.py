@@ -19,7 +19,7 @@ def project_detail_view(request, pk=None):
     """
     project = get_object_or_404(Project, pk)
     context = {
-        'project': project
+        'project': project.id
     }
     return render(request, 'project/project_detail.html', context)
 

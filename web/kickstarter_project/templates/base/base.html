@@ -13,7 +13,7 @@
  <header>
    <nav>
      <ul>
-       <li><a href="{% url "home" %}">Home</a></li>
+       <li><a href="">Home</a></li>
      </ul>
    </nav>
  </header>
@@ -23,9 +23,7 @@
    {% endblock content%}
  </main>
  <footer>
-   {% if user.is_authenticated %}
-     <h3>You're currently logged in as {{ user.username }}</h3>
-   {% endif %}
- </footer>
+  <h3>Footer is Here</h3>
+</footer>
 </body>
 </html>

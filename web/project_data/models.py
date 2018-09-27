@@ -2,7 +2,8 @@ from django.db import models
 
 
 class Project(models.Model):
-    """
+    """ This model represents what is stored in the database
+        for project_data_project
     """
     csv_id = models.IntegerField()
     name = models.CharField(max_length=1024)
@@ -21,4 +22,4 @@ class Project(models.Model):
     usd_goal_real = models.FloatField()
 
     def __str__(self):
-        return '{}'.format(self.title)
+        return '{}'.format(self.name)

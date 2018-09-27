@@ -7,7 +7,7 @@ csv_data = pd.read_csv('./assets/ks-projects-201801.csv')
 df = pd.DataFrame(csv_data)
 
 # Adjust NaN values in each column, and generally clean data set
-df['csv_id'] = df['id'].fillna(0)
+df['csv_id'] = df['csv_id'].fillna(0)
 # del df['csv_id']
 df['name'] = df['name'].fillna('unknown')
 df['category'] = df['category'].fillna('unknown')
