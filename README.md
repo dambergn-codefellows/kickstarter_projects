@@ -96,4 +96,19 @@ docker system prune
 
 - shell into web docker container and run load_db.py in container.
 
+### CSS
+- SASS
+```
+sudo npm install -g sass
+sass --version
+sass web/kickstarter_project/static/styles/main.scss ./main.css
+
+# Django SASS Processor
+# https://github.com/jrief/django-sass-processor
+pip install libsass django-compressor django-sass-processor
+pip freeze
+```
+
+- settings.py sass_processor
+
 ### saved
