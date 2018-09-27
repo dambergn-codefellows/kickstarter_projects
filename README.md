@@ -111,4 +111,7 @@ pip freeze
 
 - settings.py sass_processor
 
+### Pagination
+- python 401d9 32.02 pagination  27:33
+
 ### saved

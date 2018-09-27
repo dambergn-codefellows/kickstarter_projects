@@ -2,8 +2,29 @@
 
 {% block content %}
 
-{% for project in projects %}
 <h3><a href="{% url 'project_detail' pk=project.id %}">{{ project.name }} </a> </h3>
+<div class="pagination">
+  <span class="step-links">
+    {% if projects.has_previous %}
+      <a href="?page=1">&laquo; first</a>
+      <a href="?page={{ projects.previous_page_number }}">previous</a>
+    {% endif %}
+
+    <span class="current">
+      Page {{ projects.number }} of {{ projects.paginator.num_pages }}.
+    </span>
+
+    {% if projects.has_next %}
+      <a href="?page={{ projects.next_page_number }}">next</a>
+      <a href="?page={{ projects.paginator.num_pages }}">last &raquo;</a>
+    {% endif %}
+  </span>
+</div>
+
+{% for project in projects %}
+<a href="{% url 'project_detail' pk=project.id %}">
+  <h3>({{ project.goal }} goal){{ project.title }}</h3>
+</a>
 {% endfor %}
 
 {% endblock %}
